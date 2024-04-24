@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Annotator | Login</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar"></nav>
+
+    <img src="img/loading.gif" class="loader" alt="">
+
+    <section class="form-section">
+        <div class="form-container">
+            <img src="img/sign_in.jpg" class="form-img" alt="">
+            <form action="/" method="POST" class="form">
+                <h1 class="form-heading">welcome back, login here</h1>
+                <input type="email" autocomplete="off" id="email" name="email" placeholder="email">
+                <div id="err" class="email_error"></div>
+                <input type="password" autocomplete="off" id="password" name="password" placeholder="password">
+                <div id="err" class="password_error"></div>
+                
+                <div>
+                    <input type="checkbox" id="tc" name="tc"><label for="tc" class="tc-text">You agree to our <a href="#">terms and conditions</a></label>
+                </div>
+
+                <button class="submit-btn">login</button>
+                <a href="signup" class="other-form-link">Don't have an account? Create One</a>
+            </form>
+        </div>
+    </section>
+    
+    {{!-- <script src="js/common.js"></script> --}}
+    <script src="js/loginform.js"></script>
+
+</body>
+</html>

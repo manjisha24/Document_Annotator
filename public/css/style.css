@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ariel', sans-serif;
+    line-height: 1.8em;
+}
+.option-card{
+    border: 15px solid #fff;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+.option-name{
+    position: absolute;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 25px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: .5s;
+    margin-bottom: 5px;
+}
+.option-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.option-card:hover .option-name{
+    opacity: 0.3;
+}
+.option-card:hover .option-img{
+    opacity: 0.3;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-left: 5vw;
+    z-index: 9;
+    transition: .5s;
+}
+
+.navbar.bg, .navbar.dark{
+    background: #fff;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.link-item{
+    margin: 10px;
+}
+
+.link{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    opacity: 0.7;
+    transition: .5s;
+}
+
+.navbar.bg .link, .navbar.dark .link{
+    color: #000;
+    opacity: 0.5;
+}
+
+.link.active, .link:hover, .navbar.bg .link:hover, .navbar.bg .link.active{
+    opacity: 1;
+}
+
+.user-interactions{
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.user-icon{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

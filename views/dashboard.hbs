@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Annotator | Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="welcome-text" id="user-greeting">
+    Hello, {{user.fullname}}
+  </div>
+  <div class="button-container">
+    <button class="add-new-button" onclick="addNew()">Add New</button>
+    <a href="/logout" class="logout-button">Logout</a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th class="date">Date Modified</th>
+        <th>Document Name</th>
+        <th>Label (SE/NER)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Table rows will be inserted here dynamically -->
+      {{#each progress}}
+      <tr>
+        <td>{{ dateModified }}</td>
+        <td>{{ documentName }}</td>
+        <td>{{ label }}</td>
+        <td>
+            <form action="/dashboard/open/{{_id}}" method="GET">
+              <button class="actions open" type="submit">Open</button>
+            </form>
+            <button class="actions delete" onclick="deleteProgress('{{_id}}')">Delete</button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Annotator | Signup</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <img src="img/loading.gif" class="loader" alt="">
+
+    <section class="form-section">
+        <div class="form-container">
+            <form class="form" action="/signup" method="post">
+                <h1 class="form-heading">sign up, it only takes a minute</h1>
+                <input type="text" autocomplete="off" id="name" name="fullname" placeholder="full name" >
+                <div id="err" class="fullname_error"></div>
+                <input type="email" autocomplete="off" id="email" name="email" placeholder="email" >
+                <div id="err" class="email_error"></div>
+                <input type="password" autocomplete="off" id="password" name="password" placeholder="password" >
+                <div id="err" class="password_error"></div>
+                <input type="number" autocomplete="off" id="number" name="number" placeholder="phone number" >
+                <div id="err" class="number_error"></div>
+
+                <div>
+                    <input type="checkbox" id="tc"><label for="tc" class="tc-text">You agree to our <a href="#">terms and conditions</a></label>
+                </div>
+
+                <button class="submit-btn" id="submit">sign up</button>
+                <a href="/" class="other-form-link">Already have an account. Log in here</a>
+            </form>
+            <img src="img/sign_up.jpg" class="form-img" alt="">
+        </div>
+    </section>
+    
+    {{!-- <script src="js/common.js"></script> --}}
+    <script src="js/signupform.js"></script>
+
+</body>
+</html>

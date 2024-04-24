@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Annotator | SA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/annotation.css">
+    <link rel="stylesheet" href="css/sa.css">
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="annotation-panel" id="uploaded-document">
+                <!-- Uploaded document content will be displayed here -->
+                {{ documentContent }}
+            </div>
+            <div class="annotation-panel" id="current-sentence">
+                <!-- Current sentence being annotated will be displayed here -->
+                {{ firstSentence }}
+            </div>
+            <div class="button-container">
+                <button onclick="prevButton()">Prev</button>
+                <button onclick="skipButton()">Skip</button>
+                <button onclick="nextButton()">Next</button>
+            </div>
+        </div>
+        <div class="middle" id="labelsContainer">
+            <!-- Labels will be dynamically generated here -->
+        </div>
+        <div class="right-side">
+            <div class="annotation-panel" id="annotated-document">
+                <!-- Annotated document will be displayed here -->
+            </div>
+            <div class="button-container save">
+                <button onclick="saveProgress()">Save</button>
+                <button onclick="download()">Download</button>
+            </div>
+        </div>
+        <button id="backButton" onclick="goBack()">Back</button>
+        <a href="/logout" id="logoutButton">Logout</a>
+    </div>
+    <script src="js/sa.js"></script>
+    <script src="js/annotation.js"></script>
+</body>
+</html>

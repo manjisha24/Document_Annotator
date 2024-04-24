@@ -1,0 +1,71 @@
+.upload-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ner-bg{
+    background-image: url(/img/ner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sa-bg{
+    background-image: url(/img/sa-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.upload-container {
+    height: 55%;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+}
+#file-input {
+    display: none;
+}
+.upload-button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    height: 50px;
+    border-color: #fff;
+}
+.upload-button:hover {
+    background-color: #0056b3;
+}
+#file-name {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.upload-heading{
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+    text-transform: capitalize;
+}
+.ner-bg{
+    background-size: cover;
+}
+#backButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    border-radius: 5px;
+}

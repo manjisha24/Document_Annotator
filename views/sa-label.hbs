@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Annotator | NER Label</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/label.css">
+</head>
+<body>
+    <section class="label-section">
+        <div class="label-container">
+            <h1 class="form-heading">Label Creator</h1>
+            
+            <label for="numLabels">Number of Labels:</label>
+            <input type="number" id="numLabels" min="1">
+            <button onclick="createLabels()">Create Labels</button>
+        
+            <div id="labelInputs"></div>
+            
+            <button id="saveButton" style="display: none;" onclick="saveLabels()">Save</button>
+            <button id="backButton" onclick="goBack()">Back</button>
+        </div>
+    </section>
+    <script src="js/sa-label.js"></script>
+</body>
+</html>

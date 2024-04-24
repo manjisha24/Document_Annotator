@@ -1,0 +1,15 @@
+.annotation-btn {
+  display: inline-block;
+  margin: 7px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  max-height: 35px;
+}
+.annotation-btn:hover{
+  border: 1.5px solid #000;
+}

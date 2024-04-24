@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Annotator | Upload your Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+    <section class="upload-section" id="ner-bg">
+        <div class="upload-container">
+            <h1 class="upload-heading">Upload your Document</h1>
+            <form id="uploadForm" action="/upload_ner" method="post" enctype="multipart/form-data">
+                <input type="file" id="file-input" accept=".doc,.docx,.txt" name="file"/>
+                <button type="button" id="choose-file-button" class="upload-button">Choose Document</button>
+                <div id="file-name"></div>
+                <button type="button" id="upload-document-button" class="upload-button" style="display: none;">Upload Document</button>
+            </form>
+            <button id="backButton" onclick="goBack()">Back</button>
+        </div>
+    </section>
+    <script src="js/ner-upload.js"></script>
+</body>
+</html>
